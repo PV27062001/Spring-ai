@@ -1,0 +1,5 @@
+Translate the following text to {language}.
+
+Text: {text}
+
+Translation:
