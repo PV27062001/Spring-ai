@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class OllamaConfiguration {
 
-
     @Value("${spring.ai.ollama.chat.model}")
     private String model;
 
@@ -24,11 +23,11 @@ public class OllamaConfiguration {
     @Bean
     public ChatModel chatModel(OllamaApi ollamaApi){
         return OllamaChatModel.builder()
-                .withOllamaApi(ollamaApi)
-                .withDefaultOptions(OllamaOptions.builder()
-                        .withModel(model)
-                        .withTemperature(temperature)
-                        .withTopP(topP)
+                .ollamaApi(ollamaApi)
+                .defaultOptions(OllamaOptions.builder()
+                        .model(model)
+                        .temperature(temperature)
+                        .topP(topP)
                         .build())
                 .build();
     }

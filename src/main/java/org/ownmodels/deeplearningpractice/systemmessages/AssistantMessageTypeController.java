@@ -35,7 +35,7 @@ public class AssistantMessageTypeController {
         }
         convoHistory.add(new UserMessage(currentMessage));
         Prompt prompt = new Prompt(convoHistory);
-        String assistantMessage = chatModel.call(prompt).getResult().getOutput().getContent();
+        String assistantMessage = chatModel.call(prompt).getResult().getOutput().getText();
         convoHistory.add(new AssistantMessage(assistantMessage));
         return assistantMessage;
     }

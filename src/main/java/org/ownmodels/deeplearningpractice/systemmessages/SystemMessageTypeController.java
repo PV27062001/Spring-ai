@@ -25,7 +25,7 @@ public class SystemMessageTypeController {
 
         Prompt prompt = new Prompt(Arrays.asList(userMessage,systemMessage));
 
-        return chatModel.call(prompt).getResult().getOutput().getContent();
+        return chatModel.call(prompt).getResult().getOutput().getText();
     }
 }
 
