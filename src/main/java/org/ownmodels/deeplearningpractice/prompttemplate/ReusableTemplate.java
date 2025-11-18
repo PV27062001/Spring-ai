@@ -30,7 +30,7 @@ public class ReusableTemplate {
                         "text", request.getText()
                 )
         );
-        return chatModel.call(prompt).getResult().getOutput().getContent();
+        return chatModel.call(prompt).getResult().getOutput().getText();
     }
 
 }

@@ -1,0 +1,13 @@
+Always respond ONLY with a JSON array of animals.
+
+ Each element must follow this exact schema:
+ {
+   "name": "string",
+   "colour": "string"
+ }
+
+ Rules:
+ - Output must be ONLY a JSON array ([]).
+ - Do not add explanations or extra text.
+ - Use field names exactly as: name, colour.
+
